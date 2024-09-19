@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust size */
+    height: auto;
+}
+
+.navbar-title {
+    font-size: 1.5em;
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+#searchBar {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.nav-btn {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Menu button for mobile */
+.menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    background-color: #007BFF;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 5;
+}
+
+.mobile-menu .nav-btn {
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Hamburger menu styling */
+.menu-button {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Carousel styling */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.carousel img {
+    width: 100vw;
+    height: 300px;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.content {
+    padding: 20px;
+}
+
+.definition {
+    margin-bottom: 20px;
+}
+
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    .navbar-right {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .menu-icon:hover .menu-button {
+        background-color: #ccc;
+    }
+
+    .show-mobile-menu .mobile-menu {
+        display: flex;
+    }
+
+    .show-mobile-menu .menu-button:nth-child(1) {
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .show-mobile-menu .menu-button:nth-child(2) {
+        opacity: 0;
+    }
+
+    .show-mobile-menu .menu-button:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+}
+
+/* Navbar base styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007BFF;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right .nav-btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Menu icon for mobile view */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Hidden mobile menu initially */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 60px; /* Adjust based on navbar height */
+    background-color: #007BFF;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 5;
+}
+
+.mobile-menu .nav-btn {
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Show the mobile menu when activated */
+.show-mobile-menu .mobile-menu {
+    display: flex;
+}
+
+/* Transform menu button into 'X' when active */
+.show-mobile-menu .menu-button:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.show-mobile-menu .menu-button:nth-child(2) {
+    opacity: 0;
+}
+
+.show-mobile-menu .menu-button:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Responsive styles for mobile view */
+@media only screen and (max-width: 600px) {
+    .navbar-right {
+        display: none; /* Hide buttons on mobile */
+    }
+
+    .menu-icon {
+        display: flex; /* Show the menu icon */
+    }
+}
+/* General image styling */
+img {
+    width: 500px;  /* Set fixed width for consistency */
+    height: auto;  /* Set fixed height */
+    object-fit: cover;  /* Ensures image fits into the box while maintaining aspect ratio */
+    display: block;  /* Makes the image a block element */
+    margin: 0 auto;  /* Centers the image horizontally */
+}
+
+/* For carousel images */
+.carousel img {
+    width: auto;  /* Fixed width for carousel */
+    height: auto;  /* Fixed height for consistency */
+    object-fit: cover;  /* Makes sure images fit nicely within their container */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Center the image container */
+.definition img {
+    margin: 0 auto;  /* Horizontally center */
+    display: block;
+}
+
+/* Center the carousel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 300px; /* Adjust height based on image */
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;  /* Width of the carousel */
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 600px) {
+    img {
+        width: 100vw;  /* Full width of the mobile screen */
+        height: auto;  /* Maintain aspect ratio */
+        margin: 0 auto;  /* Centered */
+    }
+    
+    .carousel img {
+        width: 100vw;  /* Full width for mobile view */
+        height: auto;  /* Maintain aspect ratio */
+    }
+
+    .carousel-container {
+        height: auto;  /* Adjust height for mobile */
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELL Web</title>
+    <link rel="stylesheet" href="rafst.css">
+    <script src="rafen.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="rafweb.html">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+            <span class="navbar-title">CELL</span>
+        </div>
+        <div class="navbar-right">
+            <input type="text" id="searchBar" placeholder="Search for a word...">
+            <a href="about.html"><button class="nav-btn" id="aboutUsBtn">About Us</button></a>
+            <a href="#"><button class="nav-btn" id="contactBtn">Contact</button></a>
+        </div>
+        <!-- Hamburger menu for mobile mode -->
+        <div class="menu-icon" id="menuIcon">
+            <div class="menu-button"></div>
+            <div class="menu-button"></div>
+            <div class="menu-button"></div>
+        </div>
+        <div class="mobile-menu">
+            <button class="nav-btn">About Us</button>
+            <button class="nav-btn">Contact</button>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+        <button class="carousel-btn left-btn" onclick="moveLeft()">&#10094;</button>
+        <div class="carousel">
+            <img src="ph1.jpg" alt="Image 1">
+            <img src="ph2.jpg" alt="Image 1">
+            <img src="ph3.jpg" alt="Image 1">
+            <img src="ph5.jpg" alt="Image 1">
+        </div>
+        <button class="carousel-btn right-btn" onclick="moveRight()">&#10095;</button>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>Definitions Of CELL Application</h1>
+        <div class="definition">
+            <p>Utilizing advanced soil-free agricultural technologies, we seek to provide innovative solutions that boost productivity, optimize water and energy use, and promote more sustainable food production.
+                Our mission is to foster sustainable farming and ensure fair access to food across different communities, working towards a healthier and more livable world for future generations.</p>
+            <img src="logo.png" alt="Image 1">
+        </div>
+        <div class="definition">
+            <p>As cell, our mission is to increase sustainable food production worldwide using soilless farming technologies and create a more livable world for future generations.
+                By using the benefits of soilless farming, we aim to provide innovative solutions to optimize water and energy consumption, increase efficiency and make food production more environmentally friendly.
+            </p>
+        </div>
+        <div class="definition"></div>
+            <h2>Modular system</h2>
+            <p>It is one of the most efficient models of soilless cultivation.
+                it's also:
+                  economic 
+                  environmental 
+                  Production is fast and diversified Keeping pace with modern technology
+            </p>
+            <img src="ph2.jpg" alt="Image 1">
+        </div>
+        <div class="definition">
+            <h2>The CELL</h2>
+            <p>is further enhanced with a sophisticated robotic system tasked with capturing high-resolution images of the product and conducting in-depth analyses,
+                employing advanced artificial intelligence and machine learning technologies.
+            </p>
+            <img src="ph3.jpg" alt="Image 1">
+        </div>
+        
+    </div>
+</body>
+</html>
